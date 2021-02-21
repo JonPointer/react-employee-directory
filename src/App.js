@@ -11,7 +11,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.loadEmployees("?inc=name,picture,location,registered&results=15");
+    this.loadEmployees("?inc=name,picture,location,registered&results=30");
   }
 
   loadEmployees = query => {
@@ -56,27 +56,35 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        {/* Button to sort the employees by age */}
-        <button type="submit" onClick={this.employeeSortBySeniority} className="btn btn-success">
-          Sort by Seniority
-        </button>
-        <br></br>
 
-        {/* Form to filter by country */}
-        <form className="search">
-          <div className="form-group">
-            <label>Filter by Country:</label>
-            <input
-              name="country"
-              value={this.state.country}
-              type="text"
-              className="form-control"
-              placeholder="Enter Desired Country"
-              onChange={this.handleInputChange}
-            />
-          </div>
-        </form>
+      <div className="container-fluid">
+        <div className="text-center mt-2">
+          <h2>Employee Directory</h2>
+          {/* <div className ="position-absolute top-50 start-50 translate-middle"> */}
+          {/* Button to sort the employees by age */}
+          <button type="submit" onClick={this.employeeSortBySeniority} className="btn btn-primary mt-2" style={{backgroundColor: 'rgb('+51+','+ 83+','+ 132+')'}}>
+            Sort by Seniority
+        </button>
+
+          <br></br>
+
+          {/* Form to filter by country */}
+          <form className="search mt-2 col-12 col-offset-12">
+            {/* <div className="form-group"  style={{width: 100 +'px'}}> */}
+            <div className="form-group">
+              <label>Filter by Country:</label>
+              <input style={{ width: 18 + 'rem' }, {textAlign: "center"}}
+                name="country"
+                value={this.state.country}
+                type="text"
+                className="form-control"
+                placeholder="Enter Desired Country"
+                onChange={this.handleInputChange}
+                autocomplete="off"
+              />
+            </div>
+          </form>
+        </div>
 
         <Wrapper>
           {/* Map over this.state.employees and render an EmployeeCard component for each employee object */}
