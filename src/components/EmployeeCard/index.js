@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function EmployeeCard(props) {
+
+
+const EmployeeCard = (props) => {
   return (
     <div className="card">
       <div className="img-container">
@@ -13,18 +15,19 @@ function EmployeeCard(props) {
             <strong>Name:</strong> {props.name}
           </li>
           <li>
-            <strong>Occupation:</strong> {props.occupation}
+            <strong>Country:</strong> {props.country}
           </li>
           <li>
-            <strong>Location:</strong> {props.location}
+            <strong>Seniority:</strong> {props.seniority} Years
           </li>
         </ul>
       </div>
       <span onClick={() => props.removeEmployee(props.id)} className="remove">
-        𝘅
+
+        <i class="far fa-trash-alt"></i>
       </span>
     </div>
   );
 }
 
-export default FriendCard;
+export default EmployeeCard;
