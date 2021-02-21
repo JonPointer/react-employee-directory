@@ -1,7 +1,7 @@
 ![License Badge](https://img.shields.io/badge/License-The_Unlicense-blue)
 # React Employee Directory
 ## Description
-TBD  
+Employee Directory system built in React.  Utilizes a random user API to bring in a new set of "employees" each run.  Once loaded, employees can be sorted by seniority and filtered by country.  
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -10,9 +10,10 @@ TBD
 - [License](#license)
 - [Questions](#questions)
 - [Screenshot](#screenshot)
+- [Screen Recording](#screen-recording)
 - [Application](#application)
 ## Installation
-TBD
+npm i
 ## Usage
 npm start
 ## Contributing
@@ -28,6 +29,8 @@ Contact the author with questions via GitHub or email at
 
 [JonPointer at GitHub](https://github.com/JonPointer)<br>jonpointer@msn.com
 ## Screenshot
-![Screenshot](./TBD)
+![Screenshot](./public/images/screenshot.png)
+## Screen Recording
+[Screen Recording](https://drive.google.com/file/d/1ADK0FupMB3HaFHsulRI3zi1-g_njk9kV/view)
 ## Application
-[Deployed Application on Heroku](https://TBD)
+[Deployed to GitHub Pages](https://jonpointer.github.io/react-employee-directory/)
